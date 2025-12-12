@@ -1,8 +1,9 @@
 import requests
+# print(not 'https://www.youtube.com/watch?v=KAKkwvZ96eU'.endswith('.mp4'))
 while True:
     Url = input('Url: ')
-    if not Url.startswith('http://', 'https://') and not Url.endswith('.mp4'): 
-        print('Invalid URL. Please include http:// or https://')
+    if not Url.lower().startswith(('http://', 'https://')) or not Url.lower().endswith('.mp4'): 
+        print('Invalid Video Url. Should include http:// or https://')
     # print('Exiting...')
     # exit(1)
     else:
